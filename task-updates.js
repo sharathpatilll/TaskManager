@@ -12,7 +12,7 @@ const taskUpdates$ = fromEvent(eventSource, 'message').pipe(
 
 // Subscribe to receive real-time task events
 taskUpdates$.subscribe(update => {
-  console.log('🔔 Real-time task update:', update);
+  console.log('Real-time task update:', update);
 
   switch (update.type) {
     case 'TASK_UPDATED':
